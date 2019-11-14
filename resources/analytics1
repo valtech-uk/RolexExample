@@ -1,0 +1,16 @@
+var digitalDataLayer = {
+            environment: {
+                version:"5.8.7.5"
+                , environmentName:"production"
+                , siteName:"Rolex.com"
+            },
+            page: {
+                functionalURL: "/fr"
+                , previousPage : document.referrer
+                , responseCode: 200
+                , includeInDtms: true
+                , dtmsNotifications: false
+                , pageTemplate : "homepage"
+                , pageName: "fr"
+            }
+        };

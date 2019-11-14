@@ -1,0 +1,22 @@
+#version: '3'
+#service:
+
+qa-framework-docker:
+  restart: always
+  image: test-page-server
+  ports:
+    - 3000:3000
+    - 5000:5000
+    - 8000:8000
+
+bodgeit:
+  restart: always
+  image: psiinon/bodgeit
+  ports:
+    - 8080:8080
+
+sonarqube:
+  restart: always
+  image: sonarqube
+  ports:
+    - 9000:9000

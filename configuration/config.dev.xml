@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<configuration>
+    <meta-data>
+        <config-name>DEV Config</config-name>
+    </meta-data>
+
+    <resources>
+        <base-url>https://www.rolex.com/fr</base-url>
+        <watches>https://www.rolex.com/fr/watches.html</watches>
+        <model>
+            https://www.rolex.com/fr/watches/yacht-master/m226659-0002.html
+        </model>
+        <whish-list>
+
+        </whish-list>
+    </resources>
+
+</configuration>

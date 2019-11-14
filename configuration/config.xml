@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<configuration>
+    <meta-data>
+        <config-name>
+            Main config
+        </config-name>
+    </meta-data>
+    <resources>
+        <drivers>
+            <safari>/usr/bin/safaridriver</safari>
+        </drivers>
+        <self-test>
+            <base-url>
+                http://localhost:8080/bodgeit/
+            </base-url>
+            <test-url>
+                http://localhost:8000
+            </test-url>
+        </self-test>
+        <paths>
+            <assert-html-log>
+                log/html-log/
+            </assert-html-log>
+            <reports>
+                <cucumber-report>
+                    reports/cucumber-reports/scope-?-html-report-?-?-?.html
+                </cucumber-report>
+                <screenshot>
+                    reports/screenshots/?-?.png
+                </screenshot>
+                <header>
+                    reports/headers/?.har
+                </header>
+            </reports>
+        </paths>
+        <formats>
+            <timestamp>
+                yyyy.MM.dd.HH.mm.ss
+            </timestamp>
+        </formats>
+
+        <encoding>
+            <html-log>
+                UTF-8
+            </html-log>
+        </encoding>
+        <environments>
+            <qa>
+                <base-url>
+                    http://localhost:8080/bodgeit
+                </base-url>
+            </qa>
+            <uat>
+                <base-url>
+                    http://localhost:8080/bodgeit
+                </base-url>
+            </uat>
+            <dev>
+                <base-url>http://localhost:8080/bodgeit</base-url>
+            </dev>
+        </environments>
+        <environment>
+            <default>dev</default>
+        </environment>
+        <accessibility>
+            <default>false</default>
+        </accessibility>
+        <asset-script>
+            assets.adobedtm.com/d42525cfb6d7b712629d3fc5bd71e75087a5ab1d/satelliteLib-ee54e6617b13c81b3623c1ff43136590c5ae5839.js
+        </asset-script>
+    </resources>
+
+    <errors>
+        <browserException>Possible values are: chrome, firefox, edge, ie, safari, remote, headless, proxy</browserException>
+        <locatorException>Wrong locator strategy: linkName. Select valid locator strategy</locatorException>
+        <defaultEnvironmentException>Fall back default environment is not set in framework configuration. Please set it with appropriate value or set the environment in VM options or in configuration.properties file</defaultEnvironmentException>
+        <get-properties-error>
+            Error reading properties from file ? thrown at scenario ?
+        </get-properties-error>
+        <set-properties-error>
+            Error saving properties to file ? thrown at scenario ?
+        </set-properties-error>
+        <error-save-har>
+            Error saving har file ? for scenario ?
+        </error-save-har>
+        <error-save-screenshot>
+            Error saving screenshot ? for scenario ?
+        </error-save-screenshot>
+        <error-get-timestamp>
+            Unable to get timestamp from pattern ? for scenario ?
+        </error-get-timestamp>
+        <error-read-config>
+            Error getting config value ? for scenario ?
+        </error-read-config>
+        <error-get-element>
+            Error getting element ? for scenario ?
+        </error-get-element>
+        <error-get-page>
+            Error getting page ? for scenario ?
+        </error-get-page>
+        <error-null-driver>
+            Error getting ? for scenario ? with null driver
+        </error-null-driver>
+    </errors>
+</configuration>

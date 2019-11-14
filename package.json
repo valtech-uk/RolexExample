@@ -1,0 +1,16 @@
+{
+  "name": "qa-framework-docker",
+  "version": "0.0.1",
+  "description": "test page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js & node server.js & node imgserver.js",
+    "test": "echo \"Error \" && exit 1"
+  },
+  "author": "Max K",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
