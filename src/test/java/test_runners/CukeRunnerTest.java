@@ -13,7 +13,7 @@ import utilities.TestHelper;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features= {"src/test/features/test/"},
+        features= {"src/test/features/"},
         plugin = {"pretty", "html:target/cucumber",
         "json:target/jsonReports/cucumber.json", "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:"},
         glue={"steps"}
@@ -23,17 +23,9 @@ public class CukeRunnerTest {
 
     @BeforeClass
     public static void setup(){
-        TestHelper.getProperties();
         RunnerHelper.setCucumberReportName("Functional");
 
     }
 
-    @AfterClass
-    public static void tearDown(){
-        try {
-            TestHelper.purgeSeleniumHub();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 }
