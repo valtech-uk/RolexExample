@@ -3,16 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>RolexTest</groupId>
-    <artifactId>RolexTest</artifactId>
+    <groupId>com.valtech.qa.framework</groupId>
+    <artifactId>qa-framework-java</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <Display>90</Display>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.projectKey>RolexTest</sonar.projectKey>
-        <sonar.projectName>RolexTest</sonar.projectName>
+        <sonar.projectKey>QAFramework</sonar.projectKey>
+        <sonar.projectName>QAFramework</sonar.projectName>
         <screenshot>true</screenshot>
         <directory>${project.basedir}/target</directory>
 
@@ -53,12 +53,6 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.skyscreamer</groupId>
-            <artifactId>jsonassert</artifactId>
-            <version>1.5.0</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -142,7 +136,12 @@
             <version>1.12.1</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
@@ -244,7 +243,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>RolexTest</projectName>
+                            <projectName>qa-framework-java</projectName>
                             <skip>false</skip>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
@@ -297,6 +296,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
+                <defaultGoal>verify</defaultGoal>
                 <plugins>
                     <plugin>
                         <groupId>org.jacoco</groupId>

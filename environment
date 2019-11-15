@@ -1,0 +1,7 @@
+headless=true
+no_sandbox=true
+disable_gpu=true
+shm_size=2g
+privileged=true
+environment=doc
+container=true
