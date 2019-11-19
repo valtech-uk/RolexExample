@@ -203,7 +203,8 @@ public final class BaseDriver {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
-
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
         options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         options.setCapability(CapabilityType.PROXY, seleniumProxy);
         options.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
